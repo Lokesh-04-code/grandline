@@ -19,13 +19,10 @@ export default function AEAEALandingPage() {
       });
     };
     
-    // Disable default body scrolling behavior for the smooth experience
-    document.body.style.overflow = "hidden";
     window.addEventListener("mousemove", handleMouseMove);
     
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      document.body.style.overflow = "auto";
     };
   }, []);
 
@@ -99,17 +96,17 @@ export default function AEAEALandingPage() {
       </div>
 
       {/* Navbar */}
-      <nav className="relative z-50 w-full flex items-center justify-between px-6 md:px-12 py-6 max-w-7xl mx-auto">
+      <nav className="relative z-50 w-full flex items-center justify-between px-5 md:px-12 py-5 max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex items-center gap-3 cursor-pointer group"
+          className="flex items-center gap-2 sm:gap-3 cursor-pointer group"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#71C9CE] to-[#A6E3E9] flex items-center justify-center shadow-lg shadow-[#A6E3E9]/50 group-hover:scale-105 transition-transform duration-300">
-            <Network className="w-6 h-6 text-white" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#71C9CE] to-[#A6E3E9] flex shrink-0 items-center justify-center shadow-lg shadow-[#A6E3E9]/50 group-hover:scale-105 transition-transform duration-300">
+            <Network className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
-          <span className="font-extrabold text-2xl tracking-tight text-slate-800">
+          <span className="font-extrabold text-lg sm:text-2xl tracking-tight text-slate-800 truncate">
             AEAEA Technologies
           </span>
         </motion.div>
@@ -132,8 +129,9 @@ export default function AEAEALandingPage() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="hidden sm:block"
         >
-          <button className="px-7 py-3 rounded-full bg-slate-800 text-white text-sm font-medium hover:bg-slate-700 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2 group">
+          <button className="px-5 sm:px-7 py-2 sm:py-3 rounded-full bg-slate-800 text-white text-sm font-medium hover:bg-slate-700 transition-all shadow-lg hover:shadow-xl active:scale-95 flex items-center gap-2 group">
             Notify Me
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -147,20 +145,20 @@ export default function AEAEALandingPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/40 backdrop-blur-md border border-white/60 shadow-sm mb-10"
+          className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/40 backdrop-blur-md border border-white/60 shadow-sm mb-8 sm:mb-10"
         >
-          <span className="relative flex h-3 w-3">
+          <span className="relative flex h-2 w-2 sm:h-3 sm:w-3 shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#71C9CE] opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-[#71C9CE]"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 sm:h-3 sm:w-3 bg-[#71C9CE]"></span>
           </span>
-          <span className="text-sm font-medium text-slate-700 tracking-wide uppercase letter-spacing-2">Something extraordinary is launching soon</span>
+          <span className="text-xs sm:text-sm font-medium text-slate-700 tracking-wide uppercase">Something extraordinary is launching soon</span>
         </motion.div>
 
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="text-6xl md:text-8xl font-extrabold tracking-tight text-slate-900 mb-4"
+          className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-slate-900 mb-2 sm:mb-4 px-2"
         >
           AEAEA Technologies
         </motion.h1>
@@ -174,12 +172,12 @@ export default function AEAEALandingPage() {
           <motion.h2 
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
             transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-            className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#71C9CE] via-[#48999d] to-[#71C9CE] pb-2 bg-[length:200%_auto]"
+            className="text-3xl sm:text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#71C9CE] via-[#48999d] to-[#71C9CE] pb-1 sm:pb-2 bg-[length:200%_auto]"
           >
             Coming Soon
           </motion.h2>
           <motion.div 
-            className="absolute bottom-0 left-0 h-[4px] bg-[#71C9CE] rounded-full"
+            className="absolute bottom-0 left-0 h-[3px] sm:h-[4px] bg-[#71C9CE] rounded-full"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: 1.5, delay: 1, ease: "easeInOut" }}
@@ -190,7 +188,7 @@ export default function AEAEALandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="max-w-2xl text-xl md:text-2xl text-slate-600 mb-14 leading-relaxed font-light"
+          className="max-w-2xl text-base sm:text-xl md:text-2xl text-slate-600 mb-10 sm:mb-14 leading-relaxed font-light px-4"
         >
           We are building next-generation intelligent solutions for the future. 
           <br className="hidden md:block" />
@@ -208,8 +206,8 @@ export default function AEAEALandingPage() {
           {/* Animated glow on hover */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#CBF1F5] to-[#A6E3E9] opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl pointer-events-none" />
           
-          <form onSubmit={(e) => e.preventDefault()} className="relative flex items-center w-full">
-            <div className="absolute left-5 text-[#71C9CE]">
+          <form onSubmit={(e) => e.preventDefault()} className="relative flex flex-col sm:block w-full">
+            <div className="absolute left-5 top-5 sm:top-1/2 sm:-translate-y-1/2 text-[#71C9CE] hidden sm:block">
               <Mail className="w-6 h-6" />
             </div>
             <input 
@@ -217,12 +215,12 @@ export default function AEAEALandingPage() {
               placeholder="Enter your email" 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full py-5 pl-16 pr-40 bg-white/60 rounded-xl outline-none text-slate-800 text-lg placeholder:text-slate-400 focus:bg-white/90 transition-all border border-transparent focus:border-[#71C9CE]/50 shadow-inner"
+              className="w-full py-4 sm:py-5 px-5 sm:pl-16 sm:pr-40 bg-white/60 rounded-xl outline-none text-slate-800 text-base sm:text-lg placeholder:text-slate-400 focus:bg-white/90 transition-all border border-transparent focus:border-[#71C9CE]/50 shadow-inner text-center sm:text-left mb-2 sm:mb-0"
               required
             />
             <button 
               type="submit"
-              className="absolute right-2 top-2 bottom-2 px-8 rounded-lg bg-gradient-to-r from-[#71C9CE] to-[#48999d] text-white font-semibold hover:shadow-[0_0_20px_rgba(113,201,206,0.6)] transition-all flex items-center gap-2 group/btn active:scale-95"
+              className="w-full sm:absolute sm:right-2 sm:top-2 sm:bottom-2 py-4 sm:py-0 sm:px-8 rounded-xl sm:rounded-lg bg-gradient-to-r from-[#71C9CE] to-[#48999d] text-white font-semibold hover:shadow-[0_0_20px_rgba(113,201,206,0.6)] transition-all flex items-center justify-center gap-2 group/btn active:scale-95"
             >
               Notify Me
               <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
