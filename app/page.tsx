@@ -206,21 +206,23 @@ export default function AEAEALandingPage() {
           {/* Animated glow on hover */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#CBF1F5] to-[#A6E3E9] opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl pointer-events-none" />
           
-          <form onSubmit={(e) => e.preventDefault()} className="relative flex flex-col sm:block w-full">
-            <div className="absolute left-5 top-5 sm:top-1/2 sm:-translate-y-1/2 text-[#71C9CE] hidden sm:block">
-              <Mail className="w-6 h-6" />
+          <form onSubmit={(e) => e.preventDefault()} className="relative flex flex-col sm:flex-row items-center w-full gap-3 sm:gap-2 p-1">
+            <div className="relative w-full">
+              <div className="absolute left-4 sm:left-5 top-1/2 -translate-y-1/2 text-[#71C9CE] pointer-events-none">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
+              </div>
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full py-4 sm:py-5 pl-12 sm:pl-16 pr-4 sm:pr-5 bg-white/60 rounded-xl outline-none text-slate-800 text-base sm:text-lg placeholder:text-slate-400 focus:bg-white/90 transition-all border border-transparent focus:border-[#71C9CE]/50 shadow-inner"
+                required
+              />
             </div>
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full py-4 sm:py-5 px-5 sm:pl-16 sm:pr-40 bg-white/60 rounded-xl outline-none text-slate-800 text-base sm:text-lg placeholder:text-slate-400 focus:bg-white/90 transition-all border border-transparent focus:border-[#71C9CE]/50 shadow-inner text-center sm:text-left mb-2 sm:mb-0"
-              required
-            />
             <button 
               type="submit"
-              className="w-full sm:absolute sm:right-2 sm:top-2 sm:bottom-2 py-4 sm:py-0 sm:px-8 rounded-xl sm:rounded-lg bg-gradient-to-r from-[#71C9CE] to-[#48999d] text-white font-semibold hover:shadow-[0_0_20px_rgba(113,201,206,0.6)] transition-all flex items-center justify-center gap-2 group/btn active:scale-95"
+              className="w-full sm:w-auto shrink-0 py-4 sm:py-5 px-8 rounded-xl sm:rounded-lg bg-gradient-to-r from-[#71C9CE] to-[#48999d] text-white font-semibold hover:shadow-[0_0_20px_rgba(113,201,206,0.6)] transition-all flex items-center justify-center gap-2 group/btn active:scale-95"
             >
               Notify Me
               <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
