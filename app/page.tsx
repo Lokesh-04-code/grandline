@@ -29,7 +29,7 @@ export default function AEAEALandingPage() {
   if (!mounted) return <div className="min-h-screen bg-[#E3FDFD]" />;
 
   return (
-    <div className="min-h-screen bg-[#E3FDFD] text-slate-800 font-sans overflow-hidden relative selection:bg-[#71C9CE] selection:text-white">
+    <div className="flex flex-col min-h-screen bg-[#E3FDFD] text-slate-800 font-sans overflow-x-hidden relative selection:bg-[#71C9CE] selection:text-white">
       
       {/* Ambient Animated Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -139,7 +139,7 @@ export default function AEAEALandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-160px)] px-6 text-center">
+      <main className="relative z-10 flex flex-col items-center justify-center flex-1 px-4 sm:px-6 text-center py-10 sm:py-0 min-h-[500px]">
         
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -167,7 +167,7 @@ export default function AEAEALandingPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="relative inline-block mb-10"
+          className="relative inline-block mb-6 sm:mb-10"
         >
           <motion.h2 
             animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
@@ -188,7 +188,7 @@ export default function AEAEALandingPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="max-w-2xl text-base sm:text-xl md:text-2xl text-slate-600 mb-10 sm:mb-14 leading-relaxed font-light px-4"
+          className="max-w-2xl text-base sm:text-xl md:text-2xl text-slate-600 mb-8 sm:mb-14 leading-relaxed font-light px-4"
         >
           We are building next-generation intelligent solutions for the future. 
           <br className="hidden md:block" />
@@ -233,7 +233,7 @@ export default function AEAEALandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="absolute bottom-0 w-full py-8 text-center z-50">
+      <footer className="w-full py-6 text-center z-50 shrink-0 relative">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
