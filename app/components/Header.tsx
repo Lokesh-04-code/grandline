@@ -33,38 +33,45 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          scrolled
-            ? "bg-white/80 backdrop-blur-xl shadow-md shadow-[#A6E3E9]/20"
-            : "bg-transparent"
-        }`}
+        className="sticky top-0 z-50 w-full transition-all duration-500"
+        style={{
+          background: scrolled ? "rgba(255, 255, 255, 0.80)" : "transparent",
+          backdropFilter: scrolled ? "blur(20px) saturate(180%)" : "none",
+          borderBottom: scrolled ? "1px solid rgba(166, 227, 233, 0.30)" : "1px solid transparent",
+          boxShadow: scrolled ? "0 4px 40px rgba(166, 227, 233, 0.20), 0 1px 0 rgba(166, 227, 233, 0.10)" : "none",
+        }}
       >
         <nav
           className="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-10 py-3 md:py-4"
           aria-label="Main navigation"
         >
-          {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 sm:gap-3 group shrink-0">
+          {/* Logo Section */}
+          <a href="#home" className="flex items-center gap-3.5 group shrink-0">
             <Image
               src="/logo.png"
-              alt="AEAEA's Grandline"
-              width={128}
-              height={128}
-              className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
+              alt="AEAEA Technologies"
+              width={140}
+              height={40}
+              className="h-7 w-auto lg:h-8 object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-[0_0_10px_rgba(113,201,206,0.15)]"
               priority
             />
-            <span className="font-extrabold text-lg sm:text-xl tracking-tight text-slate-800">
-              AEAEA&apos;s <span className="text-[#71C9CE]">Grandline</span>
-            </span>
+            <div className="flex items-center gap-1.5 mt-0.5">
+              <span className="text-lg sm:text-xl font-black tracking-tighter text-slate-900">
+                AEAEA&apos;s
+              </span>
+              <span className="text-lg sm:text-xl font-black tracking-tighter text-[#71C9CE]">
+                Grandline
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="relative py-2 hover:text-[#71C9CE] transition-colors group"
+                className="relative py-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors duration-200 group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#71C9CE] transition-all duration-300 group-hover:w-full rounded-full" />

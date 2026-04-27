@@ -19,13 +19,24 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <a href="#home" className="flex items-center gap-2 mb-4 group">
-              <Image src="/logo.png" alt="AEAEA's Grandline" width={128} height={128} className="w-10 h-10 object-contain" />
-              <span className="font-extrabold text-lg text-slate-800">
-                AEAEA&apos;s <span className="text-[#71C9CE]">Grandline</span>
-              </span>
+            <a href="#home" className="flex items-center gap-3 mb-5 group shrink-0">
+              <Image
+                src="/logo.png"
+                alt="AEAEA Technologies"
+                width={140}
+                height={40}
+                className="h-7 w-auto lg:h-8 object-contain transition-all duration-300 group-hover:scale-105 drop-shadow-[0_0_10px_rgba(113,201,206,0.15)]"
+              />
+              <div className="flex items-center gap-1.5 mt-0.5">
+                <span className="text-lg sm:text-xl font-black tracking-tighter text-slate-900">
+                  AEAEA&apos;s
+                </span>
+                <span className="text-lg sm:text-xl font-black tracking-tighter text-[#71C9CE]">
+                  Grandline
+                </span>
+              </div>
             </a>
-            <p className="text-sm text-slate-600 leading-relaxed max-w-xs">
+            <p className="text-sm text-slate-600 leading-relaxed max-w-xs mt-2">
               Helping engineering aspirants choose the right college with data-driven insights and expert guidance.
             </p>
           </div>
