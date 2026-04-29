@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   description:
     "Get personalized college recommendations, real placement insights, and expert guidance to choose the right engineering college. Available in Telugu, Hindi, English & more.",
   keywords: [
+    "grandline",
     "aeaea technologies",
     "aeaeagrandline",
     "aeaea Grandline",
