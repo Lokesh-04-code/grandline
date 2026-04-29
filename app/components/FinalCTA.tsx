@@ -30,7 +30,7 @@ export default function FinalCTA() {
               Let us help you find the right engineering college — one that matches your goals, budget, and potential.
             </p>
             <a
-              href="#"
+              href="mailto:grandline@aeaeatech.com"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#71C9CE] to-[#48999d] text-white font-bold text-lg shadow-lg shadow-[#71C9CE]/30 hover:shadow-xl hover:shadow-[#71C9CE]/40 transition-all active:scale-95 group"
             >
               Get My College List

@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative section-padding overflow-hidden"
+      className="relative pt-12 pb-20 lg:pt-16 lg:pb-28 overflow-hidden"
     >
       {/* Ambient background blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
@@ -46,10 +46,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 leading-tight tracking-tight mb-5"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold text-slate-900 leading-[1.15] tracking-tight mb-5"
           >
-            Don&apos;t Risk Your Future with the{" "}
-            <span className="text-[#71C9CE] relative inline-block">
+            Don&apos;t Risk Your Future <br className="hidden sm:block" />
+            with the{" "}
+            <span className="text-[#71C9CE] relative inline-block mt-1 sm:mt-2">
               Wrong College Choice
               <svg
                 className="absolute -bottom-1 left-0 w-full"
